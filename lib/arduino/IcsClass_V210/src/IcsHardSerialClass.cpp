@@ -78,7 +78,8 @@ bool IcsHardSerialClass::begin()
     return false;
   }
 
-  icsHardSerial->begin(baudRate,SERIAL_8E1);
+  //icsHardSerial->begin(baudRate,SERIAL_8E1);
+  icsHardSerial->begin(baudRate,SERIAL_8E1,33,23);
   icsHardSerial->setTimeout(timeOut);
   pinMode(enPin, OUTPUT);
   enLow();
